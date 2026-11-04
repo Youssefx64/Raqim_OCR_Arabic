@@ -1,0 +1,32 @@
+{
+  "config": {
+    "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+    "dataset_id": "aamijar/muharaf-public",
+    "prompt": "Transcribe the Arabic handwriting in this image exactly as written.",
+    "min_height": 64,
+    "max_side": 1280,
+    "max_chars": 200,
+    "lora_r": 32,
+    "lora_alpha": 64,
+    "lora_dropout": 0.05,
+    "train_vision": true,
+    "epochs": 2,
+    "lr": 0.0001,
+    "effective_batch": 32,
+    "target_vram_gb": 12.0,
+    "max_train_samples": null,
+    "n_eval": 300,
+    "seed": 42
+  },
+  "baseline_zero_shot": {
+    "CER": 1.1281,
+    "WER": 1.1144,
+    "n": 300
+  },
+  "fine_tuned": {
+    "CER": 0.1737,
+    "WER": 0.4494,
+    "n": 1334
+  },
+  "peak_vram_gb": 10.9
+}
